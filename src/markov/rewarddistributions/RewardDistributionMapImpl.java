@@ -73,14 +73,6 @@ public class RewardDistributionMapImpl implements RewardDistribution {
 			res.put(next, res.get(next)+newInstanceMerge.getProbabilityOf(d));
 		}
 		return newInstance(res, params);
-		//
-		/*return newInstance(
-				newInstanceMerge.getMap()
-				.keySet().stream()
-				.collect(
-						Collectors.toMap(
-								x->x+rewardForPlaying,
-						x->(double)newInstanceMerge.getProbability(x))));*/
 	}
 
 	public static Set<RewardDistribution> newInstanceWeightedMergeOfRewardDistributions(Map<Set<RewardDistribution>, Double>
